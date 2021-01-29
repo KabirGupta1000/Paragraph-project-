@@ -1,0 +1,41 @@
+<html>
+    <head>
+        <title>
+            Joining Paragraphs Project
+        </title>
+    </head>
+    <body>
+        <span>1.</span>
+        <input type="text" id="left_box_1" placeholder="Input Box 1">
+        <br><br>
+        <span>2.</span>
+        <input type="text" id="left_box_2" placeholder="Input Box 2">
+        <br><br>
+        <span>3.</span>
+        <input type="text" id="left_box_3" placeholder="Input Box 3">
+        <br><br>
+        <span>4.</span>
+        <input type="text" id="left_box_4" placeholder="Input Box 4">
+        <br><br>
+        <span>5.</span>
+        <input type="text" id="left_box_5" placeholder="Input Box 5">
+        <br><br>
+        <span>6.</span>
+        <input type="text" id="left_box_6" placeholder="Input Box 6">
+        <br><br>
+        <div id="showparagraph1"></div>
+        <button onclick="getparagraph1()">Get paragraph 1</button>
+        <script>
+            function getparagraph1(){
+                var Inputs=[];
+                for (var i=1 ; i <=6 ; i++)
+                {
+                    Inputs.push(document.getElementById("left_box_" + i).value);
+                }
+                document.getElementById("showparagraph1").innerHTML= Inputs.join(". ");
+                    
+                }
+        </script>
+
+    </body>
+</html>
